@@ -1,18 +1,20 @@
 # ecommerce_01-databricks-assignment_02
 E-commerce Data Engineering Lakehouse
 1. Project Overview
+
 This project implements an end-to-end e-commerce data engineering pipeline using Azure Databricks, PySpark, Unity Catalog, and Delta Lake.
 
 The pipeline processes the Brazilian Olist e-commerce_01 dataset through Bronze, Silver, and Gold layers and includes Slowly Changing Dimension Type 2 (SCD Type 2), data quality validation, Delta Lake Time Travel, and notebook orchestration.
 
 2. Technologies Used
+   
 Azure Databricks
 Python and PySpark
 SQL
 Unity Catalog
 Delta Lake
 GitHub
-3. Project Architecture
+4. Project Architecture
 Bronze Layer
 Reads five Olist CSV datasets.
 Converts raw data to Parquet format.
@@ -31,7 +33,7 @@ Master Pipeline
 Runs Bronze, Silver, Gold, and both SCD Type 2 notebook executions in sequence.
 Uses dbutils.notebook.run() for orchestration.
 Includes error handling and execution status messages.
-4. Main Notebooks
+5. Main Notebooks
 Notebook	Purpose
 Volume_Setup	Volume and project setup
 Bronze_Layer	CSV-to-Parquet processing
@@ -39,7 +41,7 @@ Silver_Layer	Data cleaning and Delta tables
 Gold_Layer	Fact, dimension, and aggregation tables
 SCD_Type2	Customer and product history
 Master_Pipeline	End-to-end orchestration
-5. Validation Results
+6. Validation Results
 The completed pipeline produced the following record counts:
 
 Table or dataset	Rows
